@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tetris</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/T-yellow.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/index.css">
+
+   
+</head>
+
+<body>
+    <div class="root">
+        <div class="board">
+            <canvas id="main-board" style="border:2px solid white;"></canvas>
+        </div>
+        <div class="indicators">
+            <div class="stats">
+                <div class="stats-container">
+                    <div class="stats-what">Level -&nbsp; </div>  
+                    <div id="level">2</div>
+                </div>
+                <div class="stats-container">
+                    <div class="stats-what">Score -&nbsp; </div>  
+                    <div id="score">30</div>
+                </div>
+                <div class="stats-container">
+                    <div class="stats-what">High score -&nbsp; </div> 
+                    <div id="high-score">30</div>
+                </div>
+            </div>
+            <div class="next-element">
+                <div class="div">Next:</div>
+                <canvas id="next"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="gameover">
+        <div class="gameover-txt">
+            Game Over
+        </div>
+        <div class="gameover-info">
+            Press space/tap to restart the game
+        </div>
+    </div>
+</body>
+<script src="odata.js"></script>
+<script src="index.js"></script>
+
+</html>

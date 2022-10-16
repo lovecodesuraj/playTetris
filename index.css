@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+* {
+    margin: 0;
+}
+@font-face {
+    font-family: Emulogic;
+    src: url(fonts/Emulogic-zrEw.ttf);
+}
+
+body{
+    background-color: black;
+    user-select: none;
+    height: 100vh;
+}
+.root {
+    height: 95vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.board{
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+}
+.indicators{
+    align-self: flex-end;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25px;
+}
+.indicators>div{
+    background-color: aliceblue;
+    padding: 30px;
+}
+.stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.stats-container>div{
+    display: inline-block;
+}
+.stats-container{
+    display: flex;
+    align-content: space-between;
+}
+.next-element{
+    display: flex;
+    flex-direction: column;
+}
+.gameover{
+    position: absolute;
+    font-family: Emulogic;
+    top: 0;
+    background-color: rgba(90, 90, 90, 0.9);
+    width: 100vw;
+    height: 100vh;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.gameover-txt{
+    font-size: 90px;
+}
+.gameover-info{
+    margin-top: 50px;
+    font-size: 30px;
+}
+@media (max-width:800px) {
+    .indicators{
+        font-size: 12px;
+        flex-direction: row;
+        order: 1;
+        height: unset;
+        width: 100%;
+        align-items: unset;
+        justify-content: center;
+        align-self: unset;
+        /* display: none; */
+    }
+    .next-element{
+        display:flex;
+        flex-direction: column;
+    }
+    #next{
+        display:block;
+    }
+    .indicators>div{
+        padding: 10px;
+    }
+    .root{
+        align-items: flex-start;
+        padding: 20px;
+    }
+    .board{
+        order: 2;
+    }
+}
